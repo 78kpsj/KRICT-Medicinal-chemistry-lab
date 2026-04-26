@@ -604,17 +604,124 @@
   footer span { color: rgba(255,255,255,0.6); }
 
   /* ── RESPONSIVE ── */
+  /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    nav { padding: 0 1.5rem; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-right { display: block; }
-    .hero-left { padding: 5rem 2rem 4rem; }
-    section { padding: 4rem 1.5rem; }
+
+    /* NAV */
+    nav {
+      padding: 0 1.2rem;
+      height: 56px;
+    }
+    .nav-logo { font-size: 13px; }
+    .nav-links { gap: 1rem; }
+    .nav-links a { font-size: 11px; letter-spacing: 0.04em; }
+
+    /* HERO */
+    .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 56px; }
+    .hero-right { height: 220px; display: block; }
+    .hero-right img { opacity: 0.7; }
+    .hero-left {
+      padding: 2.5rem 1.5rem 2rem;
+      grid-column: 1;
+    }
+    .hero-left::before { display: none; }
+    .hero-tag { font-size: 10px; margin-left: 0; }
+    .hero-title { font-size: 1.8rem; margin-left: 0; }
+    .hero-sub { font-size: 13.5px; margin-left: 0; margin-bottom: 2rem; }
+    .hero-cta { margin-left: 0; flex-wrap: wrap; }
+    .btn-primary, .btn-outline { padding: 0.7rem 1.4rem; font-size: 12px; }
+
+    /* SECTIONS */
+    section { padding: 3rem 1.5rem; }
+    .section-title { font-size: 1.4rem; }
+    .section-desc { font-size: 14px; }
+
+    /* RESEARCH GRID */
     .research-grid { grid-template-columns: 1fr; }
-    .members-grid { grid-template-columns: 1fr 1fr; }
+    .research-card { padding: 1.8rem 1.5rem; }
+
+    /* MEMBERS */
+    .members-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* PI CARD */
+    #members > div[style*="grid-template-columns:auto"] {
+      grid-template-columns: 1fr !important;
+      padding: 1.8rem 1.5rem !important;
+      gap: 1.2rem !important;
+    }
+    #members > div[style*="grid-template-columns:1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* PUBLICATIONS */
+    .pub-item { grid-template-columns: 80px 1fr; gap: 0 0.8rem; }
+    .pub-ga { width: 80px; height: 60px; }
+    .pub-title { font-size: 13px; }
+    .pub-authors { font-size: 12px; }
+    .pub-journal { font-size: 10px; }
+    .pub-filter-row { gap: 0.4rem; }
+    .pub-filter-btn { font-size: 10px; padding: 5px 10px; }
+
+    /* NEWS */
     .news-grid { grid-template-columns: 1fr; }
+
+    /* CONTACT */
     .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+
+    /* FOOTER */
+    footer {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 9px;
+    }
+  }
+
+  @media (max-width: 480px) {
+
+    /* NAV — hamburger 없이 스크롤 가능하게 */
+    nav { overflow-x: auto; }
+    .nav-links { gap: 0.7rem; flex-wrap: nowrap; }
+    .nav-links a { font-size: 10px; white-space: nowrap; }
+
+    /* HERO */
+    .hero-title { font-size: 1.5rem; }
+    .hero-right { height: 180px; }
+
+    /* SECTIONS */
+    section { padding: 2.5rem 1.2rem; }
+
+    /* MEMBERS */
+    .members-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .member-card { padding: 1.2rem 1rem; }
+    .member-avatar { width: 52px; height: 52px; font-size: 16px; }
+    .member-name { font-size: 13px; }
+
+    /* PI CARD inner layout */
+    #members img[style*="border-radius:50%"] {
+      width: 60px !important;
+      height: 60px !important;
+    }
+
+    /* CAREER / EDUCATION grids */
+    div[style*="grid-template-columns:90px 1fr"] {
+      grid-template-columns: 70px 1fr !important;
+      gap: 0.5rem !important;
+    }
+
+    /* PUBLICATIONS */
+    .pub-item { grid-template-columns: 70px 1fr; }
+    .pub-ga { width: 70px; height: 50px; }
+    .pub-year-label { font-size: 12px; }
+
+    /* RESEARCH FUNDING */
+    div[style*="grid-template-columns:1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* FOOTER */
+    footer { font-size: 8px; }
   }
 </style>
 </head>
