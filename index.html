@@ -237,13 +237,40 @@
     background: var(--border);
     border: 1px solid var(--border);
   }
-  .research-card {
-    background: var(--surface);
-    padding: 2.5rem 2rem;
-    position: relative;
-    transition: background 0.2s;
+  .research-card { background: var(--surface); padding: 0; position: relative; transition: background 0.2s; }
+  .accordion-card { cursor: pointer; }
+  .accordion-card:hover { background: var(--accent-light); }
+  .accordion-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.6rem 2rem;
   }
-  .research-card:hover { background: var(--accent-light); }
+  .accordion-header .research-num { flex-shrink: 0; }
+  .accordion-header h3 {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.4;
+    margin: 0;
+  }
+  .accordion-arrow {
+    flex-shrink: 0;
+    font-size: 18px;
+    color: var(--gold);
+    font-weight: 300;
+    transition: transform 0.25s;
+    line-height: 1;
+  }
+  .accordion-card.open .accordion-arrow { transform: rotate(45deg); }
+  .accordion-body {
+    display: none;
+    padding: 0 2rem 1.6rem 2rem;
+    border-top: 1px solid var(--border2);
+  }
+  .accordion-body p { font-size: 13.5px; color: var(--ink2); line-height: 1.75; margin-bottom: 1rem; }
+  .accordion-card.open .accordion-body { display: block; }
   .research-num {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -761,63 +788,107 @@
   <div class="section-label">Research Areas</div>
   <h2 class="section-title">Core <strong>Research Areas</strong></h2>
   <p class="section-desc">
-    From oncogenic transcription factor modulation and ubiquitin pathway regulation to organosulfur chemistry —
-    we pursue innovative small-molecule drug candidates at the intersection of medicinal chemistry and organic synthesis.
+    Our laboratory pursues innovative small-molecule drug candidates across nine interconnected research areas — spanning oncology target modulation (transcription factors, ubiquitination pathways, protein kinases), organosulfur and nucleoside chemistry, next-generation bioconjugation (ADC), peptide-based scaffolds, and green synthesis technologies (microfluidics, mechanochemistry).
   </p>
   <div class="research-grid">
-    <div class="research-card">
-      <span class="research-num">01</span>
-      <h3>Direct Modulation of Oncogenic Transcription Factors</h3>
-      <p>Direct inhibition of oncogenic transcription factors using small molecules. Targeting protein–DNA interactions (PDI) and protein–protein interactions (PPI) to suppress c-Myc, YAP-TEAD, and related targets.</p>
-      <span class="research-tag">Oncology / Transcription Factor</span>
+    <div class="research-card accordion-card" onclick="toggleAccordion(this)">
+      <div class="accordion-header">
+        <span class="research-num">01</span>
+        <h3>Direct Modulation of Oncogenic Transcription Factors</h3>
+        <span class="accordion-arrow">＋</span>
+      </div>
+      <div class="accordion-body">
+        <p>Direct inhibition of oncogenic transcription factors using small molecules. Targeting protein–DNA interactions (PDI) and protein–protein interactions (PPI) to suppress c-Myc, YAP-TEAD, and related targets.</p>
+        <span class="research-tag">Oncology / Transcription Factor</span>
+      </div>
     </div>
-    <div class="research-card">
-      <span class="research-num">02</span>
-      <h3>Regulation of Ubiquitination Pathways</h3>
-      <p>Development of small-molecule inhibitors targeting ubiquitin-like activating enzymes E1 (UAE, NAE, SAE). Selective modulation of the ubiquitin–proteasome system for anticancer applications.</p>
-      <span class="research-tag">UBL E1 / Ubiquitination</span>
+    <div class="research-card accordion-card" onclick="toggleAccordion(this)">
+      <div class="accordion-header">
+        <span class="research-num">02</span>
+        <h3>Regulation of Ubiquitination Pathways</h3>
+        <span class="accordion-arrow">＋</span>
+      </div>
+      <div class="accordion-body">
+        <p>Development of small-molecule inhibitors targeting ubiquitin-like activating enzymes E1 (UAE, NAE, SAE). Selective modulation of the ubiquitin–proteasome system for anticancer applications.</p>
+        <span class="research-tag">UBL E1 / Ubiquitination</span>
+      </div>
     </div>
-    <div class="research-card">
-      <span class="research-num">03</span>
-      <h3>Protein Kinase Inhibitors</h3>
-      <p>Design and optimization of small-molecule inhibitors targeting aberrantly activated protein kinases. Employing selective covalent inhibition strategies and systematic SAR studies.</p>
-      <span class="research-tag">Kinase Inhibitor / Drug Design</span>
+    <div class="research-card accordion-card" onclick="toggleAccordion(this)">
+      <div class="accordion-header">
+        <span class="research-num">03</span>
+        <h3>Protein Kinase Inhibitors</h3>
+        <span class="accordion-arrow">＋</span>
+      </div>
+      <div class="accordion-body">
+        <p>Design and optimization of small-molecule inhibitors targeting aberrantly activated protein kinases. Employing selective covalent inhibition strategies and systematic SAR studies.</p>
+        <span class="research-tag">Kinase Inhibitor / Drug Design</span>
+      </div>
     </div>
-    <div class="research-card">
-      <span class="research-num">04</span>
-      <h3>Organosulfur Chemistry-Based Drug Discovery</h3>
-      <p>Synthesis and medicinal chemistry application of organosulfur(IV) compounds including sulfoximines, sulfilimines, and N-cyano sulfoximines. Covering COX inhibition, anticancer activity, and amide bond bioisostere studies.</p>
-      <span class="research-tag">Organosulfur / Heterocycle</span>
+    <div class="research-card accordion-card" onclick="toggleAccordion(this)">
+      <div class="accordion-header">
+        <span class="research-num">04</span>
+        <h3>Organosulfur Chemistry-Based Drug Discovery</h3>
+        <span class="accordion-arrow">＋</span>
+      </div>
+      <div class="accordion-body">
+        <p>Synthesis and medicinal chemistry application of organosulfur(IV) compounds including sulfoximines, sulfilimines, and N-cyano sulfoximines. Covering COX inhibition, anticancer activity, and amide bond bioisostere studies.</p>
+        <span class="research-tag">Organosulfur / Heterocycle</span>
+      </div>
     </div>
-    <div class="research-card">
-      <span class="research-num">05</span>
-      <h3>Nucleoside Analogues</h3>
-      <p>Development of small molecules based on nucleoside-mimicking structures. Exploring novel anticancer mechanisms through post-translational modification (PTM) regulation.</p>
-      <span class="research-tag">Nucleoside / Antiviral</span>
+    <div class="research-card accordion-card" onclick="toggleAccordion(this)">
+      <div class="accordion-header">
+        <span class="research-num">05</span>
+        <h3>Nucleoside Analogues</h3>
+        <span class="accordion-arrow">＋</span>
+      </div>
+      <div class="accordion-body">
+        <p>Development of small molecules based on nucleoside-mimicking structures. Exploring novel anticancer mechanisms through post-translational modification (PTM) regulation.</p>
+        <span class="research-tag">Nucleoside / Antiviral</span>
+      </div>
     </div>
-    <div class="research-card">
-      <span class="research-num">06</span>
-      <h3>Antibody–Drug Conjugate (ADC) Chemistry</h3>
-      <p>Development of bioorthogonal ADC conjugation strategies based on N-cyano sulfoximine–thiazole ligation. Achieving uniform DAR and high stability on trastuzumab and related antibodies.</p>
-      <span class="research-tag">ADC / Bioconjugation</span>
+    <div class="research-card accordion-card" onclick="toggleAccordion(this)">
+      <div class="accordion-header">
+        <span class="research-num">06</span>
+        <h3>Antibody–Drug Conjugate (ADC) Chemistry</h3>
+        <span class="accordion-arrow">＋</span>
+      </div>
+      <div class="accordion-body">
+        <p>Development of bioorthogonal ADC conjugation strategies based on N-cyano sulfoximine–thiazole ligation. Achieving uniform DAR and high stability on trastuzumab and related antibodies.</p>
+        <span class="research-tag">ADC / Bioconjugation</span>
+      </div>
     </div>
-    <div class="research-card">
-      <span class="research-num">07</span>
-      <h3>Peptide-Based Drug Discovery</h3>
-      <p>Drug discovery inspired by natural cyclic peptides such as lasso peptides. Exploring target selectivity and protease resistance enabled by unique three-dimensional scaffolds.</p>
-      <span class="research-tag">Peptide / Natural Products</span>
+    <div class="research-card accordion-card" onclick="toggleAccordion(this)">
+      <div class="accordion-header">
+        <span class="research-num">07</span>
+        <h3>Peptide-Based Drug Discovery</h3>
+        <span class="accordion-arrow">＋</span>
+      </div>
+      <div class="accordion-body">
+        <p>Drug discovery inspired by natural cyclic peptides such as lasso peptides. Exploring target selectivity and protease resistance enabled by unique three-dimensional scaffolds.</p>
+        <span class="research-tag">Peptide / Natural Products</span>
+      </div>
     </div>
-    <div class="research-card">
-      <span class="research-num">08</span>
-      <h3>Microfluidics Process Development</h3>
-      <p>Optimization of microfluidic synthesis processes for ADC and nanoparticle formulations. Significantly reducing reaction time and improving conjugation uniformity compared to batch processes.</p>
-      <span class="research-tag">Process Chemistry / Microfluidics</span>
+    <div class="research-card accordion-card" onclick="toggleAccordion(this)">
+      <div class="accordion-header">
+        <span class="research-num">08</span>
+        <h3>Microfluidics Process Development</h3>
+        <span class="accordion-arrow">＋</span>
+      </div>
+      <div class="accordion-body">
+        <p>Optimization of microfluidic synthesis processes for ADC and nanoparticle formulations. Significantly reducing reaction time and improving conjugation uniformity compared to batch processes.</p>
+        <span class="research-tag">Process Chemistry / Microfluidics</span>
+      </div>
     </div>
-    <div class="research-card">
-      <span class="research-num">09</span>
-      <h3>Mechanochemistry</h3>
-      <p>Green organic synthesis using mechanical energy without solvents. Exploring solid-state reactions via ball milling to replace solution-phase processes and discover novel reactivity.</p>
-      <span class="research-tag">Mechanochemistry / Green Chemistry</span>
+    <div class="research-card accordion-card" onclick="toggleAccordion(this)">
+      <div class="accordion-header">
+        <span class="research-num">09</span>
+        <h3>Mechanochemistry</h3>
+        <span class="accordion-arrow">＋</span>
+      </div>
+      <div class="accordion-body">
+        <p>Green organic synthesis using mechanical energy without solvents. Exploring solid-state reactions via ball milling to replace solution-phase processes and discover novel reactivity.</p>
+        <span class="research-tag">Mechanochemistry / Green Chemistry</span>
+      </div>
     </div>
   </div>
 </section>
@@ -1097,6 +1168,11 @@ function closeLightbox(e) {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeLightbox();
 });
+
+function toggleAccordion(card) {
+  const isOpen = card.classList.contains('open');
+  card.classList.toggle('open', !isOpen);
+}
 
 let pubFilterType = 'all';
 
