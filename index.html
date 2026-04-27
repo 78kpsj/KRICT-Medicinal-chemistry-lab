@@ -1501,7 +1501,7 @@ function renderPubs() {
           ${gaHtml(p)}
           <div>
             <div class="pub-title">${p.title}${badge}</div>
-            <div class="pub-authors">${p.authors}</div>
+            <div class="pub-authors">${p.authors ? p.authors.replace(/\b(Lim HJ|Park SJ|Hyun JY)\b/g, '<strong>$1</strong>') : ''}</div>
             <div class="pub-journal">${p.journal}${p.doi ? ` &nbsp;<a href="https://doi.org/${p.doi}" target="_blank" style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);text-decoration:none;letter-spacing:0.06em;">DOI →</a>` : ''}</div>
           </div>
         </div>`;
