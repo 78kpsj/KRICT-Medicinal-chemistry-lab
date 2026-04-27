@@ -688,6 +688,11 @@
     .pub-filter-row { gap: 0.4rem; }
     .pub-filter-btn { font-size: 10px; padding: 5px 10px; }
 
+    /* CONTACT PI grid */
+    #contact div[style*="grid-template-columns:repeat(3"] {
+      grid-template-columns: 1fr !important;
+    }
+
     /* NEWS */
     .news-grid { grid-template-columns: 1fr; }
 
@@ -927,7 +932,7 @@
         Five technology transfer deals to domestic pharmaceutical companies (total upfront fee ~1M USD).
       </p>
       <div style="display:flex;gap:1.5rem;margin-top:1rem;flex-wrap:wrap;align-items:center;">
-        <span style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.45);">📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbc8d1ced5cbdac9d0fbd0c9d2d8cf95c9de95d0c9">[email&#160;protected]</a></span>
+        <span style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.45);">📧 <a href="mailto:sjunpark@krict.re.kr" style="color:rgba(255,255,255,0.6);text-decoration:none;">sjunpark@krict.re.kr</a></span>
         <a href="https://orcid.org/0000-0003-1767-0900" target="_blank" style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);text-decoration:none;">ORCID →</a>
         <a href="https://www.linkedin.com/in/seong-junp-64401083" target="_blank" style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);text-decoration:none;">LinkedIn →</a>
         <a href="https://scholar.google.co.kr/citations?user=qvnR8p0AAAAJ&hl=ko" target="_blank" style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);text-decoration:none;">Google Scholar →</a>
@@ -1110,7 +1115,7 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const PUBS = [
   {year:2026,type:"paper",title:"Mechanoredox Radical Annulation for the Solvent-Free Synthesis of 2-Substituted Benzothiophenes",authors:"Song JH, Kim E, Kang DH, Hyun JY, Lim HJ, Park SJ",journal:"RSC Mechanochemistry",doi:"10.1039/D6MR00013D"},
   {year:2026,type:"paper",title:"N-Cyano sulfoximine-mediated thiazole ligation with N-terminal cysteine under mild aqueous conditions",authors:"Kim E, Hyun JY, Song JH, Lim HJ, Park SJ",journal:"RSC Med. Chem.",doi:"10.1039/D5MD00948K"},
@@ -1357,33 +1362,41 @@ renderPubs();
 <section id="contact">
   <div class="section-label">Contact</div>
   <h2 class="section-title"><strong>Contact</strong></h2>
-  <div style="max-width:560px;">
-    <ul class="contact-info-list">
-      <li>
-        <span class="ci-label">Institution</span>
-        <span class="ci-val">Korea Research Institute of Chemical Technology (KRICT)<br>Medicinal Chemistry Laboratory</span>
-      </li>
-      <li>
-        <span class="ci-label">Address</span>
-        <span class="ci-val">141 Gajeong-ro, Yuseong-gu, Daejeon 34114,<br>Republic of Korea</span>
-      </li>
-      <li>
-        <span class="ci-label">PI</span>
-        <span class="ci-val">Seong Jun Park &nbsp;<a href="mailto:sjunpark@krict.re.kr" style="color:rgba(255,255,255,0.7);font-family:'DM Mono',monospace;font-size:11px;">sjunpark@krict.re.kr</a></span>
-      </li>
-      <li>
-        <span class="ci-label">Co-PI</span>
-        <span class="ci-val">Hwan Jung Lim &nbsp;<a href="mailto:indium@krict.re.kr" style="color:rgba(255,255,255,0.7);font-family:'DM Mono',monospace;font-size:11px;">indium@krict.re.kr</a></span>
-      </li>
-      <li>
-        <span class="ci-label">Researcher</span>
-        <span class="ci-val">Ji Young Hyun &nbsp;<a href="mailto:hyunjy@krict.re.kr" style="color:rgba(255,255,255,0.7);font-family:'DM Mono',monospace;font-size:11px;">hyunjy@krict.re.kr</a></span>
-      </li>
-      <li>
-        <span class="ci-label">Phone</span>
-        <span class="ci-val">042-860-7175</span>
-      </li>
-    </ul>
+  <div style="max-width:680px;">
+    <div style="background:var(--surface);border:1px solid rgba(255,255,255,0.1);padding:1.8rem 2rem;margin-bottom:1rem;">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Institution &amp; Address</div>
+      <div style="font-size:14px;color:rgba(255,255,255,0.85);line-height:1.8;">
+        Korea Research Institute of Chemical Technology (KRICT)<br>
+        Medicinal Chemistry Laboratory<br>
+        141 Gajeong-ro, Yuseong-gu, Daejeon 34114, Republic of Korea
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.08);">
+      <div style="background:var(--accent2);padding:1.5rem 1.5rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">PI · 1</div>
+        <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:0.6rem;">Hwan Jung Lim</div>
+        <div style="display:flex;flex-direction:column;gap:0.35rem;">
+          <a href="mailto:indium@krict.re.kr" style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.65);text-decoration:none;letter-spacing:0.04em;">📧 indium@krict.re.kr</a>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.65);letter-spacing:0.04em;">📞 042-860-7177</span>
+        </div>
+      </div>
+      <div style="background:var(--accent2);padding:1.5rem 1.5rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">PI · 2</div>
+        <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:0.6rem;">Seong Jun Park</div>
+        <div style="display:flex;flex-direction:column;gap:0.35rem;">
+          <a href="mailto:sjunpark@krict.re.kr" style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.65);text-decoration:none;letter-spacing:0.04em;">📧 sjunpark@krict.re.kr</a>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.65);letter-spacing:0.04em;">📞 042-860-7175</span>
+        </div>
+      </div>
+      <div style="background:var(--accent2);padding:1.5rem 1.5rem;">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">PI · 3</div>
+        <div style="font-size:14px;font-weight:600;color:#fff;margin-bottom:0.6rem;">Ji Young Hyun</div>
+        <div style="display:flex;flex-direction:column;gap:0.35rem;">
+          <a href="mailto:hyunjy@krict.re.kr" style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.65);text-decoration:none;letter-spacing:0.04em;">📧 hyunjy@krict.re.kr</a>
+          <span style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.65);letter-spacing:0.04em;">📞 042-860-7178</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
