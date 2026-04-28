@@ -705,6 +705,11 @@
       grid-template-columns: repeat(2, 1fr) !important;
     }
 
+    /* Alumni grid */
+    #alumni > div[style*="grid-template-columns:repeat(3"] {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
     /* CONTACT PI grid */
     #contact div[style*="grid-template-columns:repeat(3"] {
       grid-template-columns: 1fr !important;
@@ -784,6 +789,7 @@
     <li><a href="#publications">Publications</a></li>
     <li><a href="#news">News</a></li>
     <li><a href="#album">Gallery</a></li>
+    <li><a href="#alumni">Alumni</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1563,6 +1569,88 @@ renderPubs();
         <p>We are recruiting M.S. and Ph.D. students in medicinal chemistry and chemical biology. Interested applicants are encouraged to contact the PI.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ── ALUMNI ── -->
+<section id="alumni">
+  <div class="section-label">Alumni</div>
+  <h2 class="section-title">Our <strong>Alumni</strong></h2>
+  <p class="section-desc">Former lab members who have gone on to contribute to academia, industry, and beyond.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:2rem;">
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">On-Yu Kang</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2022</div>
+      <div style="font-size:12px;color:var(--ink2);">Korea Research Institute of Bioscience and Biotechnology</div>
+    </div>
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">Ji Hye Choi</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2015</div>
+      <div style="font-size:12px;color:var(--ink2);">Korea Research Institute of Chemical Technology</div>
+    </div>
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">In Young Son</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2016</div>
+      <div style="font-size:12px;color:var(--ink2);color:var(--ink3);">—</div>
+    </div>
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">Bo Eun Kim</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2019</div>
+      <div style="font-size:12px;color:var(--ink3);">—</div>
+    </div>
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">Hyojung Ahn</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2017</div>
+      <div style="font-size:12px;color:var(--ink2);">Ph.D. Course at UST</div>
+    </div>
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">YaeJi Lee</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2022</div>
+      <div style="font-size:12px;color:var(--ink2);">PHARMICELL</div>
+    </div>
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">Issabayeva Guldana</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2025</div>
+      <div style="font-size:12px;color:var(--ink3);">—</div>
+    </div>
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">Kkonnip Son</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2015</div>
+      <div style="font-size:12px;color:var(--ink3);">—</div>
+    </div>
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">Jun Ki Kim</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2018</div>
+      <div style="font-size:12px;color:var(--ink2);">DukSan Neolux</div>
+    </div>
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">Sang Mee Kim</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2020</div>
+      <div style="font-size:12px;color:var(--ink3);">—</div>
+    </div>
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">In Seok Oh</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2021</div>
+      <div style="font-size:12px;color:var(--ink2);">DAEGU-GYEONGBUK Medical Innovation Foundation (DGMIF)</div>
+    </div>
+
+    <div style="background:var(--surface);padding:1.4rem 1.5rem;">
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">Ye Ji Seo</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-bottom:6px;">2023</div>
+      <div style="font-size:12px;color:var(--ink2);">Huons</div>
+    </div>
+
   </div>
 </section>
 
